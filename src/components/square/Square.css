@@ -1,0 +1,49 @@
+.square {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: rgba(48, 53, 53, 0.7);
+  border-radius: 5px;
+  font-size: 38px;
+  font-weight: bold;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  color: rgba(219, 219, 219, 0.8);
+  cursor: pointer;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+}
+
+.square:active, .square:focus {
+  border: none;
+  outline: none;
+}
+
+.square:hover {
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.square.Xed {
+  background-color: rgba(192, 28, 28, 0.7);
+  cursor: default;
+}
+
+.square.Oed {
+  background-color: rgba(28, 192, 28, 0.7);
+  cursor: default;
+}
+
+.square.Xed:hover, .square.Oed:hover {
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.square.X:hover:not(.Xed, .Oed) {
+  background-color: rgba(192, 28, 28, 0.4);
+}
+
+.square.O:hover:not(.Xed, .Oed) {
+  background-color: rgba(28, 192, 28, 0.4);
+}
+/*# sourceMappingURL=Square.css.map */

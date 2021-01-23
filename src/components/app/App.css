@@ -1,0 +1,195 @@
+.backdrops {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: bolder;
+  font-size: 182px;
+  cursor: default;
+}
+
+.backdrops .X, .backdrops .O {
+  position: absolute;
+  line-height: 122px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all .07s ease;
+  transition: all .07s ease;
+}
+
+.backdrops .O:hover {
+  color: #0fa10f;
+  text-shadow: 0px 0px 10px #0fa10a;
+}
+
+.backdrops .X:hover {
+  color: #a10f0f;
+  text-shadow: 0px 0px 10px #a10f0f;
+}
+
+.backdrops #x1.X {
+  -webkit-transform: translate(20vw, 4vh) rotate(10deg);
+          transform: translate(20vw, 4vh) rotate(10deg);
+}
+
+.backdrops #x2.X {
+  -webkit-transform: translate(72vw, 72vh) rotate(-50deg);
+          transform: translate(72vw, 72vh) rotate(-50deg);
+}
+
+.backdrops #x3.X {
+  -webkit-transform: translate(11vw, 86vh) rotate(23deg);
+          transform: translate(11vw, 86vh) rotate(23deg);
+}
+
+.backdrops #o1.O {
+  -webkit-transform: translate(2vw, 41vh) rotate(-66deg);
+          transform: translate(2vw, 41vh) rotate(-66deg);
+}
+
+.backdrops #o2.O {
+  -webkit-transform: translate(83vw, 4vh) rotate(91deg);
+          transform: translate(83vw, 4vh) rotate(91deg);
+}
+
+.game {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 6fr;
+      grid-template-columns: 3fr 6fr;
+  background: #9e9e9e;
+  background: linear-gradient(30deg, rgba(46, 50, 56, 0.4) 0%, rgba(20, 26, 36, 0.5) 100%);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  overflow: hidden;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 20px 1px rgba(0, 0, 0, 0.2);
+  width: 70vw;
+  height: 85vh;
+}
+
+.game .game-info {
+  padding: 1.5rem 2rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 53, 53, 0.7);
+  border-radius: 15px 2px 2px 15px;
+  -webkit-box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  line-height: calc(16px*1.68);
+}
+
+.game .game-info p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.game .game-info ol {
+  margin-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.game .game-info ol li, .game .game-info ol li button {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.game .game-info ol li button, .game .game-info ol li button button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.game .game-info ol li button:focus, .game .game-info ol li button button:focus {
+  outline: none;
+  border: none;
+}
+
+.game .game-info ol li button:hover, .game .game-info ol li button button:hover {
+  color: white;
+  text-shadow: 0px 0px 5px white;
+}
+
+.game .game-board {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.game .game-board #restart {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  left: 1.5rem;
+  top: 1rem;
+  color: #b1b1b1;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.game .game-board #restart button {
+  border: none;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.game .game-board #restart button svg {
+  fill: #b1b1b1;
+}
+
+.game .game-board #restart button:focus {
+  border: none;
+  outline: none;
+}
+
+.game .game-board #restart:hover button svg {
+  fill: white;
+}
+
+.game .game-board #restart:hover {
+  color: white;
+}
+
+.game .game-board p.player-turn {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+/*# sourceMappingURL=App.css.map */
