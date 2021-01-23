@@ -1,3 +1,6 @@
+# Intro
+This app is made in React JS. Some code is available in reactjs.org/tutorial/tutorial.html. Retouched some styles and functions. Hope you liked it.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
