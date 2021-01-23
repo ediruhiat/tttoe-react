@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <div className="unavailable">
+      <p>This app currently not available for mobile browser!</p>
+    </div>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
